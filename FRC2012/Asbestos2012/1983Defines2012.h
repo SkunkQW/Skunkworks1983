@@ -1,0 +1,5 @@
+//Jag ports
+#define JAGPORTLEFT1 1
+#define JAGPORTLEFT2 2
+#define JAGPORTRIGHT1 3
+#define JAGPORTRIGHT2 4

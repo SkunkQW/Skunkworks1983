@@ -48,13 +48,13 @@ CPU = PPC603
 TOOL_FAMILY = gnu
 TOOL = gnu
 TOOL_PATH = 
-CC_ARCH_SPEC = -mcpu=603 -mstrict-align -mno-implicit-fp -mlongcall
+CC_ARCH_SPEC = -mcpu=603 -mstrict-align -mno-implicit-fp
 LIBPATH = 
 LIBS = 
 
-IDE_INCLUDES = -I$(WIND_BASE)/target/h -I$(WIND_BASE)/target/h/WPILib -I$(WIND_BASE)/target/h/wrn/coreip 
+IDE_INCLUDES = -I$(WIND_BASE)/target/h -IC:/WindRiver/vxworks-6.3/target/h/WPILib -I$(WIND_BASE)/target/h/wrn/coreip 
 
-IDE_LIBRARIES = $(WIND_BASE)/target/lib/WPILib.a 
+IDE_LIBRARIES = 
 
 
 
@@ -77,104 +77,109 @@ endif
 
 
 #Project Targets
-PROJECT_TARGETS = SimpleTemplate/$(MODE_DIR)/SimpleTemplate.out \
-	 SimpleTemplate_partialImage/$(MODE_DIR)/SimpleTemplate_partialImage.o
+PROJECT_TARGETS = Asbestos2012/$(MODE_DIR)/Asbestos2012.out \
+	 Asbestos2012_partialImage/$(MODE_DIR)/Asbestos2012_partialImage.o
 
 
 #Rules
 
-# SimpleTemplate
+# Asbestos2012
 ifeq ($(DEBUG_MODE),1)
-SimpleTemplate/$(MODE_DIR)/% : DEBUGFLAGS_C-Compiler = -g
-SimpleTemplate/$(MODE_DIR)/% : DEBUGFLAGS_C++-Compiler = -g
-SimpleTemplate/$(MODE_DIR)/% : DEBUGFLAGS_Linker = -g
-SimpleTemplate/$(MODE_DIR)/% : DEBUGFLAGS_Partial-Image-Linker = 
-SimpleTemplate/$(MODE_DIR)/% : DEBUGFLAGS_Librarian = 
-SimpleTemplate/$(MODE_DIR)/% : DEBUGFLAGS_Assembler = -g
+Asbestos2012/$(MODE_DIR)/% : DEBUGFLAGS_C-Compiler = -g
+Asbestos2012/$(MODE_DIR)/% : DEBUGFLAGS_C++-Compiler = -g
+Asbestos2012/$(MODE_DIR)/% : DEBUGFLAGS_Linker = -g
+Asbestos2012/$(MODE_DIR)/% : DEBUGFLAGS_Partial-Image-Linker = 
+Asbestos2012/$(MODE_DIR)/% : DEBUGFLAGS_Librarian = 
+Asbestos2012/$(MODE_DIR)/% : DEBUGFLAGS_Assembler = -g
 else
-SimpleTemplate/$(MODE_DIR)/% : DEBUGFLAGS_C-Compiler = -O2 -fstrength-reduce -fno-builtin
-SimpleTemplate/$(MODE_DIR)/% : DEBUGFLAGS_C++-Compiler = -O2 -fstrength-reduce -fno-builtin
-SimpleTemplate/$(MODE_DIR)/% : DEBUGFLAGS_Linker = -O2 -fstrength-reduce -fno-builtin
-SimpleTemplate/$(MODE_DIR)/% : DEBUGFLAGS_Partial-Image-Linker = 
-SimpleTemplate/$(MODE_DIR)/% : DEBUGFLAGS_Librarian = 
-SimpleTemplate/$(MODE_DIR)/% : DEBUGFLAGS_Assembler = -O2 -fstrength-reduce -fno-builtin
+Asbestos2012/$(MODE_DIR)/% : DEBUGFLAGS_C-Compiler = -O2 -fstrength-reduce -fno-builtin
+Asbestos2012/$(MODE_DIR)/% : DEBUGFLAGS_C++-Compiler = -O2 -fstrength-reduce -fno-builtin
+Asbestos2012/$(MODE_DIR)/% : DEBUGFLAGS_Linker = -O2 -fstrength-reduce -fno-builtin
+Asbestos2012/$(MODE_DIR)/% : DEBUGFLAGS_Partial-Image-Linker = 
+Asbestos2012/$(MODE_DIR)/% : DEBUGFLAGS_Librarian = 
+Asbestos2012/$(MODE_DIR)/% : DEBUGFLAGS_Assembler = -O2 -fstrength-reduce -fno-builtin
 endif
-SimpleTemplate/$(MODE_DIR)/% : IDE_INCLUDES = -I$(WIND_BASE)/target/h -I$(WIND_BASE)/target/h/WPILib -I$(WIND_BASE)/target/h/wrn/coreip 
-SimpleTemplate/$(MODE_DIR)/% : IDE_LIBRARIES = $(WIND_BASE)/target/lib/WPILib.a 
-SimpleTemplate/$(MODE_DIR)/% : PROJECT_TYPE = DKM
-SimpleTemplate/$(MODE_DIR)/% : DEFINES = 
-SimpleTemplate/$(MODE_DIR)/% : EXPAND_DBG = 0
-SimpleTemplate/$(MODE_DIR)/% : VX_CPU_FAMILY = ppc
-SimpleTemplate/$(MODE_DIR)/% : CPU = PPC603
-SimpleTemplate/$(MODE_DIR)/% : TOOL_FAMILY = gnu
-SimpleTemplate/$(MODE_DIR)/% : TOOL = gnu
-SimpleTemplate/$(MODE_DIR)/% : TOOL_PATH = 
-SimpleTemplate/$(MODE_DIR)/% : CC_ARCH_SPEC = -mcpu=603 -mstrict-align -mno-implicit-fp -mlongcall
-SimpleTemplate/$(MODE_DIR)/% : LIBPATH = 
-SimpleTemplate/$(MODE_DIR)/% : LIBS = 
-SimpleTemplate/$(MODE_DIR)/% : OBJ_DIR := SimpleTemplate/$(MODE_DIR)
+Asbestos2012/$(MODE_DIR)/% : IDE_INCLUDES = -I$(WIND_BASE)/target/h -IC:/WindRiver/vxworks-6.3/target/h/WPILib -I$(WIND_BASE)/target/h/wrn/coreip 
+Asbestos2012/$(MODE_DIR)/% : IDE_LIBRARIES = 
+Asbestos2012/$(MODE_DIR)/% : PROJECT_TYPE = DKM
+Asbestos2012/$(MODE_DIR)/% : DEFINES = 
+Asbestos2012/$(MODE_DIR)/% : EXPAND_DBG = 0
+Asbestos2012/$(MODE_DIR)/% : VX_CPU_FAMILY = ppc
+Asbestos2012/$(MODE_DIR)/% : CPU = PPC603
+Asbestos2012/$(MODE_DIR)/% : TOOL_FAMILY = gnu
+Asbestos2012/$(MODE_DIR)/% : TOOL = gnu
+Asbestos2012/$(MODE_DIR)/% : TOOL_PATH = 
+Asbestos2012/$(MODE_DIR)/% : CC_ARCH_SPEC = -mcpu=603 -mstrict-align -mno-implicit-fp
+Asbestos2012/$(MODE_DIR)/% : LIBPATH = 
+Asbestos2012/$(MODE_DIR)/% : LIBS = 
+Asbestos2012/$(MODE_DIR)/% : OBJ_DIR := Asbestos2012/$(MODE_DIR)
 
-OBJECTS_SimpleTemplate = SimpleTemplate_partialImage/$(MODE_DIR)/SimpleTemplate_partialImage.o
+OBJECTS_Asbestos2012 = Asbestos2012_partialImage/$(MODE_DIR)/Asbestos2012_partialImage.o
 
-SimpleTemplate/$(MODE_DIR)/SimpleTemplate.out : $(OBJECTS_SimpleTemplate)
-	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@";rm -f "$@";nmppc $(OBJECTS_SimpleTemplate) $(IDE_LIBRARIES) | tclsh $(WIND_BASE)/host/resource/hutils/tcl/munch.tcl -c ppc > $(OBJ_DIR)/ctdt.c; $(TOOL_PATH)ccppc $(DEBUGFLAGS_Linker) $(CC_ARCH_SPEC) -fdollars-in-identifiers -Wall $(ADDED_CFLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES)  -o $(OBJ_DIR)/ctdt.o -c $(OBJ_DIR)/ctdt.c; $(TOOL_PATH)ccppc -r -nostdlib -Wl,-X -T $(WIND_BASE)/target/h/tool/gnu/ldscripts/link.OUT -o "$@" $(OBJ_DIR)/ctdt.o $(OBJECTS_SimpleTemplate) $(IDE_LIBRARIES) $(LIBPATH) $(LIBS)  $(ADDED_LIBPATH) $(ADDED_LIBS) && if [ "$(EXPAND_DBG)" = "1" ]; then plink "$@";fi
+Asbestos2012/$(MODE_DIR)/Asbestos2012.out : $(OBJECTS_Asbestos2012)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@";rm -f "$@";nmppc $(OBJECTS_Asbestos2012) $(IDE_LIBRARIES) | tclsh $(WIND_BASE)/host/resource/hutils/tcl/munch.tcl -c ppc > $(OBJ_DIR)/ctdt.c; $(TOOL_PATH)ccppc $(DEBUGFLAGS_Linker) $(CC_ARCH_SPEC) -fdollars-in-identifiers -Wall $(ADDED_CFLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES)  -o $(OBJ_DIR)/ctdt.o -c $(OBJ_DIR)/ctdt.c; $(TOOL_PATH)ccppc -r -nostdlib -Wl,-X -T $(WIND_BASE)/target/h/tool/gnu/ldscripts/link.OUT -o "$@" $(OBJ_DIR)/ctdt.o $(OBJECTS_Asbestos2012) $(IDE_LIBRARIES) $(LIBPATH) $(LIBS)  $(ADDED_LIBPATH) $(ADDED_LIBS) && if [ "$(EXPAND_DBG)" = "1" ]; then plink "$@";fi
 
-SimpleTemplate/$(MODE_DIR)/SimpleTemplate_compile_file : $(FILE) ;
+Asbestos2012/$(MODE_DIR)/Asbestos2012_compile_file : $(FILE) ;
 
-_clean :: SimpleTemplate/$(MODE_DIR)/SimpleTemplate_clean
+_clean :: Asbestos2012/$(MODE_DIR)/Asbestos2012_clean
 
-SimpleTemplate/$(MODE_DIR)/SimpleTemplate_clean : 
-	$(TRACE_FLAG)if [ -d "SimpleTemplate" ]; then cd "SimpleTemplate"; rm -rf $(MODE_DIR); fi
+Asbestos2012/$(MODE_DIR)/Asbestos2012_clean : 
+	$(TRACE_FLAG)if [ -d "Asbestos2012" ]; then cd "Asbestos2012"; rm -rf $(MODE_DIR); fi
 
 
-# SimpleTemplate_partialImage
+# Asbestos2012_partialImage
 ifeq ($(DEBUG_MODE),1)
-SimpleTemplate_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_C-Compiler = -g
-SimpleTemplate_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_C++-Compiler = -g
-SimpleTemplate_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Linker = -g
-SimpleTemplate_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Partial-Image-Linker = 
-SimpleTemplate_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Librarian = 
-SimpleTemplate_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Assembler = -g
+Asbestos2012_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_C-Compiler = -g
+Asbestos2012_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_C++-Compiler = -g
+Asbestos2012_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Linker = -g
+Asbestos2012_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Partial-Image-Linker = 
+Asbestos2012_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Librarian = 
+Asbestos2012_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Assembler = -g
 else
-SimpleTemplate_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_C-Compiler = -O2 -fstrength-reduce -fno-builtin
-SimpleTemplate_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_C++-Compiler = -O2 -fstrength-reduce -fno-builtin
-SimpleTemplate_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Linker = -O2 -fstrength-reduce -fno-builtin
-SimpleTemplate_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Partial-Image-Linker = 
-SimpleTemplate_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Librarian = 
-SimpleTemplate_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Assembler = -O2 -fstrength-reduce -fno-builtin
+Asbestos2012_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_C-Compiler = -O2 -fstrength-reduce -fno-builtin
+Asbestos2012_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_C++-Compiler = -O2 -fstrength-reduce -fno-builtin
+Asbestos2012_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Linker = -O2 -fstrength-reduce -fno-builtin
+Asbestos2012_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Partial-Image-Linker = 
+Asbestos2012_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Librarian = 
+Asbestos2012_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Assembler = -O2 -fstrength-reduce -fno-builtin
 endif
-SimpleTemplate_partialImage/$(MODE_DIR)/% : IDE_INCLUDES = -I$(WIND_BASE)/target/h -I$(WIND_BASE)/target/h/WPILib -I$(WIND_BASE)/target/h/wrn/coreip 
-SimpleTemplate_partialImage/$(MODE_DIR)/% : IDE_LIBRARIES = $(WIND_BASE)/target/lib/WPILib.a 
-SimpleTemplate_partialImage/$(MODE_DIR)/% : PROJECT_TYPE = DKM
-SimpleTemplate_partialImage/$(MODE_DIR)/% : DEFINES = 
-SimpleTemplate_partialImage/$(MODE_DIR)/% : EXPAND_DBG = 0
-SimpleTemplate_partialImage/$(MODE_DIR)/% : VX_CPU_FAMILY = ppc
-SimpleTemplate_partialImage/$(MODE_DIR)/% : CPU = PPC603
-SimpleTemplate_partialImage/$(MODE_DIR)/% : TOOL_FAMILY = gnu
-SimpleTemplate_partialImage/$(MODE_DIR)/% : TOOL = gnu
-SimpleTemplate_partialImage/$(MODE_DIR)/% : TOOL_PATH = 
-SimpleTemplate_partialImage/$(MODE_DIR)/% : CC_ARCH_SPEC = -mcpu=603 -mstrict-align -mno-implicit-fp -mlongcall
-SimpleTemplate_partialImage/$(MODE_DIR)/% : LIBPATH = 
-SimpleTemplate_partialImage/$(MODE_DIR)/% : LIBS = 
-SimpleTemplate_partialImage/$(MODE_DIR)/% : OBJ_DIR := SimpleTemplate_partialImage/$(MODE_DIR)
+Asbestos2012_partialImage/$(MODE_DIR)/% : IDE_INCLUDES = -I$(WIND_BASE)/target/h -IC:/WindRiver/vxworks-6.3/target/h/WPILib -I$(WIND_BASE)/target/h/wrn/coreip 
+Asbestos2012_partialImage/$(MODE_DIR)/% : IDE_LIBRARIES = 
+Asbestos2012_partialImage/$(MODE_DIR)/% : PROJECT_TYPE = DKM
+Asbestos2012_partialImage/$(MODE_DIR)/% : DEFINES = 
+Asbestos2012_partialImage/$(MODE_DIR)/% : EXPAND_DBG = 0
+Asbestos2012_partialImage/$(MODE_DIR)/% : VX_CPU_FAMILY = ppc
+Asbestos2012_partialImage/$(MODE_DIR)/% : CPU = PPC603
+Asbestos2012_partialImage/$(MODE_DIR)/% : TOOL_FAMILY = gnu
+Asbestos2012_partialImage/$(MODE_DIR)/% : TOOL = gnu
+Asbestos2012_partialImage/$(MODE_DIR)/% : TOOL_PATH = 
+Asbestos2012_partialImage/$(MODE_DIR)/% : CC_ARCH_SPEC = -mcpu=603 -mstrict-align -mno-implicit-fp
+Asbestos2012_partialImage/$(MODE_DIR)/% : LIBPATH = 
+Asbestos2012_partialImage/$(MODE_DIR)/% : LIBS = 
+Asbestos2012_partialImage/$(MODE_DIR)/% : OBJ_DIR := Asbestos2012_partialImage/$(MODE_DIR)
 
-SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Asbestos2012/AsbestosMain.o : C:/WindRiver/FRC2012/Asbestos2012/AsbestosMain.cpp
-	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+Asbestos2012_partialImage/$(MODE_DIR)/Objects/Asbestos2012/C1983Drive.o : C:/WindRiver/FRC2012/Asbestos2012/C1983Drive.cpp
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
-OBJECTS_SimpleTemplate_partialImage = SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Asbestos2012/AsbestosMain.o
+Asbestos2012_partialImage/$(MODE_DIR)/Objects/Asbestos2012/PewPewBot.o : C:/WindRiver/FRC2012/Asbestos2012/PewPewBot.cpp
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
-SimpleTemplate_partialImage/$(MODE_DIR)/SimpleTemplate_partialImage.o : $(OBJECTS_SimpleTemplate_partialImage)
-	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc -r -nostdlib -Wl,-X  -o "$@" $(OBJECTS_SimpleTemplate_partialImage) $(LIBPATH) $(LIBS) $(ADDED_LIBPATH) $(ADDED_LIBS)  && if [ "$(EXPAND_DBG)" = "1" ]; then plink "$@";fi
 
-SimpleTemplate_partialImage/$(MODE_DIR)/SimpleTemplate_partialImage_compile_file : $(FILE) ;
+OBJECTS_Asbestos2012_partialImage = Asbestos2012_partialImage/$(MODE_DIR)/Objects/Asbestos2012/C1983Drive.o \
+	 Asbestos2012_partialImage/$(MODE_DIR)/Objects/Asbestos2012/PewPewBot.o
 
-_clean :: SimpleTemplate_partialImage/$(MODE_DIR)/SimpleTemplate_partialImage_clean
+Asbestos2012_partialImage/$(MODE_DIR)/Asbestos2012_partialImage.o : $(OBJECTS_Asbestos2012_partialImage)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc -r -nostdlib -Wl,-X  -o "$@" $(OBJECTS_Asbestos2012_partialImage) $(LIBPATH) $(LIBS) $(ADDED_LIBPATH) $(ADDED_LIBS)  && if [ "$(EXPAND_DBG)" = "1" ]; then plink "$@";fi
 
-SimpleTemplate_partialImage/$(MODE_DIR)/SimpleTemplate_partialImage_clean : 
-	$(TRACE_FLAG)if [ -d "SimpleTemplate_partialImage" ]; then cd "SimpleTemplate_partialImage"; rm -rf $(MODE_DIR); fi
+Asbestos2012_partialImage/$(MODE_DIR)/Asbestos2012_partialImage_compile_file : $(FILE) ;
 
-DEP_FILES := SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Asbestos2012/AsbestosMain.d
+_clean :: Asbestos2012_partialImage/$(MODE_DIR)/Asbestos2012_partialImage_clean
+
+Asbestos2012_partialImage/$(MODE_DIR)/Asbestos2012_partialImage_clean : 
+	$(TRACE_FLAG)if [ -d "Asbestos2012_partialImage" ]; then cd "Asbestos2012_partialImage"; rm -rf $(MODE_DIR); fi
+
+DEP_FILES := Asbestos2012_partialImage/$(MODE_DIR)/Objects/Asbestos2012/C1983Drive.d Asbestos2012_partialImage/$(MODE_DIR)/Objects/Asbestos2012/PewPewBot.d
 -include $(DEP_FILES)
 
 
