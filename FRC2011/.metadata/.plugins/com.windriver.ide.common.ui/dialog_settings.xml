@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="WROptionalMessageDialog">
+		<item key="TargetPlugin.UnreachableDefaultRegistryWarning.result" value="0"/>
+		<item key="HostShellPropertiesDialog.additionalInfo" value="true"/>
+		<item key="WTXConsolePropertiesDialog.additionalInfo" value="false"/>
+	</section>
+</section>

@@ -1,0 +1,341 @@
+#include "WPILib.h"
+#include "math.h"
+#define STRAIGHTLINEMODE 1
+#define FORKLEFTMODE 2
+#define FORKRIGHTMODE 3
+#define OUTLEFTMODE 4
+#define OUTRIGHTMODE 5
+
+#define LEFTMOTOR 1
+#define RIGHTMOTOR 2 //motor channels for initializing encoders. Find actual values later.
+
+
+class SixWheelBot : public SimpleRobot
+{
+	RobotDrive myRobot; // robot drive system
+	Joystick stickL; //Port 1
+	Joystick stickR; //Port 2
+	AxisCamera &camera;
+	DigitalInput *lsLeft;
+	DigitalInput *lsMiddle;
+	DigitalInput *lsRight;
+	/*DigitalInput *bcd1;
+	DigitalInput *bcd2;
+	DigitalInput *bcd3;*/
+	//ENCODEEncoder *leftEncoder;
+	//ENCODEEncoder *rightEncoder;
+	Relay *light;
+
+public:
+	SixWheelBot(void):
+		myRobot(1, 2, 3, 4),	// these must be initialized in the same order
+		stickL(1), stickR(2), camera()		// as they are declared above.
+	{
+		myRobot.SetExpiration(0.1);
+		//leftEncoder = new Encoder(LEFTMOTOR, LEFTMOTOR, false, 1);
+		//rightEncoder = new Encoder(RIGHTMOTOR, RIGHTMOTOR, false, 1);
+		light = new Relay(1, light->kForwardOnly);
+		/*bcd1 = new DigitalInput(4);
+		bcd2 = new DigitalInput(5);
+		bcd3 = new DigitalInput(6);*/
+		bool autonomous;
+	}
+
+	/**
+	 * Drive left & right motors for 2 seconds then stop
+	 */
+	void Autonomous(void)
+	{
+		autonomous = true;
+		if(autonomous)
+		{
+			/*int autoMode = 0;
+			autoMode |= bcd1->Get();
+			autoMode <<= 1;
+			autoMode |= bcd2->Get();
+			autoMode <<= 1;
+			autoMode |= bcd3->Get();*/
+			
+			int autoMode = 1;
+			
+			lsLeft = new DigitalInput(1); //light sensors
+			lsMiddle = new DigitalInput(2);
+			lsRight = new DigitalInput(3);
+			
+			bool leftValue = lsLeft->Get();
+			bool middleValue = lsMiddle->Get();
+			bool rightValue = lsRight->Get();
+			
+			
+			int lEncCount;
+			int rEncCount;
+			int avgEncCount;
+			float turnMod; //value to modify speeds
+			
+			//myRobot.SetLeftRightMotorOutputs(.2,.2);
+			switch(autoMode)//Include actual BCD thingy later
+			{
+			case STRAIGHTLINEMODE: //Straight line. Scores on middle column of left or right grid.
+				while (!(leftValue) || !(rightValue))
+				{
+					leftValue = lsLeft->Get();
+					middleValue = lsMiddle->Get();
+					rightValue = lsRight->Get();
+					if (leftValue > rightValue)
+					{
+						turnMod = -.2;
+					}
+					else if (leftValue < rightValue)
+					{
+						turnMod = .2;
+					}
+					else
+					{
+						turnMod = 0;
+					}
+					myRobot.SetLeftRightMotorOutputs(-.2 - turnMod, -.2 + turnMod);
+				}
+				myRobot.SetLeftRightMotorOutputs(0,0);
+				break;
+			case FORKLEFTMODE: //Fork turn left. Scores on far right column of left grid.
+				while ((!(leftValue) || !(rightValue)) && middleValue)
+				{
+					leftValue = lsLeft->Get();
+					middleValue = lsMiddle->Get();
+					rightValue = lsRight->Get();
+					if (leftValue > rightValue)
+					{
+						turnMod = .1;
+					}
+					else if (leftValue < rightValue)
+					{
+						turnMod = -.1;
+					}
+					else
+					{
+						turnMod = 0;
+					}
+					myRobot.SetLeftRightMotorOutputs(.5 - turnMod, .5 + turnMod);
+				}
+				myRobot.SetLeftRightMotorOutputs(.3, .5);
+				Wait(.5);
+				leftValue = lsLeft->Get();
+				middleValue = lsMiddle->Get();
+				rightValue = lsRight->Get();
+				cout<<middleValue ; //TESTZ 
+				while (!(leftValue)|| !(rightValue))
+				{
+					leftValue = lsLeft->Get();
+					middleValue = lsMiddle->Get();
+					rightValue = lsRight->Get();				
+					if (leftValue > rightValue)
+					{
+						turnMod = -.1;
+					}
+					else if (rightValue > leftValue)
+					{
+						turnMod = .1;
+					}
+					else
+					{
+						turnMod = 0;
+					}
+					myRobot.SetLeftRightMotorOutputs(.5 - turnMod, .5 + turnMod);
+				}
+				myRobot.SetLeftRightMotorOutputs(0,0);
+				break;
+			case FORKRIGHTMODE://Fork turn right. Scores on far left column of right grid.
+				while ((!(leftValue)|| !(rightValue)) && middleValue > 75)
+					{
+						leftValue = lsLeft->Get();
+						middleValue = lsMiddle->Get();
+						rightValue = lsRight->Get();
+						if (leftValue > rightValue)
+						{
+							turnMod = .1;
+						}
+						else if (leftValue < rightValue)
+						{
+							turnMod = -.1;
+						}
+						else
+						{
+							turnMod = 0;
+						}
+						myRobot.SetLeftRightMotorOutputs(.5 - turnMod, .5 + turnMod);
+					}
+					myRobot.SetLeftRightMotorOutputs(.5, .3);
+					Wait(.5);
+					leftValue = lsLeft->Get();
+					middleValue = lsMiddle->Get();
+					rightValue = lsRight->Get();
+					while (!(leftValue)|| !(rightValue) || middleValue)
+					{
+						leftValue = lsLeft->Get();
+						middleValue = lsMiddle->Get();
+						rightValue = lsRight->Get();
+						if (leftValue > rightValue)
+						{
+							turnMod = -.1;
+						}
+						else if (rightValue > leftValue)
+						{
+							turnMod = .1;
+						}
+						else
+						{
+							turnMod = 0;
+						}
+						myRobot.SetLeftRightMotorOutputs(.5 - turnMod, .5 + turnMod);
+					}
+					myRobot.SetLeftRightMotorOutputs(0,0);
+					break;
+				case OUTLEFTMODE: //Go straight and turn off the line to the left. Scores on the farthest left peg.
+					/*ENCODElEncCount = leftEncoder->Get();
+					rEncCount = rightEncoder->Get();
+					avgEncCount = (lEncCount + rEncCount)/2;
+					while (avgEncCount >= 9001) //Go straight. Change values.
+					{
+						leftValue = lsLeft->Get();
+						middleValue = lsMiddle->Get();
+						rightValue = lsRight->Get();
+						if (leftValue > rightValue)
+						{
+							turnMod = .1;
+						}
+						else if (leftValue < rightValue)
+						{
+							turnMod = -.1;
+						}
+						else
+						{
+							turnMod = 0;
+						}
+						myRobot.SetLeftRightMotorOutputs(.5 - turnMod, .5 + turnMod);
+					}ENCODE*/
+					//ENCODEleftEncoder->Reset();
+					//ENCODErightEncoder->Reset();
+					//ENCODElEncCount = 0;
+					//ENCODErEncCount = 0;
+					//ENCODEwhile(rEncCount <= 90) //Turn left off of line. Get actual value for a turn later
+					//ENCODE{
+					//ENCODErEncCount = rightEncoder->Get();
+					//ENCODEmyRobot.SetLeftRightMotorOutputs(0,.5);
+					//ENCODE}
+					myRobot.SetLeftRightMotorOutputs(0,0);
+					/*ENCODErightEncoder->Reset();
+					leftEncoder->Reset();
+					lEncCount = 0;
+					rEncCount = 0;
+					avgEncCount = 0;
+					while (avgEncCount <= 200) //Go until a certain encoder count which should end by the peg
+					{
+						lEncCount = leftEncoder->Get();
+						rEncCount = rightEncoder->Get();
+						avgEncCount = (lEncCount + rEncCount)/2;
+						myRobot.SetLeftRightMotorOutputs(.5,.5);
+					}ENCODE*/
+					myRobot.SetLeftRightMotorOutputs(0,0);
+					break;
+				case OUTRIGHTMODE: //Go straight and turn off the line to the right. Scores on the farthest right column.
+					//ENCODElEncCount = leftEncoder->Get();
+					//ENCODErEncCount = rightEncoder->Get();
+					//ENCODEavgEncCount = (lEncCount + rEncCount)/2;
+					/*ENCODEwhile (avgEncCount <= 9001) //Go straight. Change values.
+					{
+						lEncCount = leftEncoder->Get();
+						rEncCount = rightEncoder->Get();
+						avgEncCount = (lEncCount + rEncCount)/2;
+						leftValue = lsLeft->Get();
+						middleValue = lsMiddle->Get();
+						rightValue = lsRight->Get();
+						if (leftValue > rightValue)
+						{
+							turnMod = .1;
+						}
+						else if (leftValue < rightValue)
+						{
+							turnMod = -.1;
+						}
+						else
+						{
+							turnMod = 0;
+						}
+						myRobot.SetLeftRightMotorOutputs(.5 - turnMod, .5 + turnMod);
+					}ENCODE*/
+					//ENCODEleftEncoder->Reset();
+					//ENCODErightEncoder->Reset();
+					//ENCODElEncCount = 0;
+					//ENCODErEncCount = 0;
+					//ENCODEavgEncCount = 0;
+					//ENCODEwhile(lEncCount <= 90) //Turn left off of line. Get actual value for a turn later
+					//ENCODE{
+						//ENCODElEncCount = leftEncoder->Get();
+					//ENCODEmyRobot.SetLeftRightMotorOutputs(.5,0);
+						//ENCODE}
+					myRobot.SetLeftRightMotorOutputs(0,0);
+					//ENCODErightEncoder->Reset();
+					//ENCODEleftEncoder->Reset();
+					lEncCount = 0;
+					rEncCount = 0;
+					avgEncCount = 0;
+					//ENCODEwhile (avgEncCount <= 200) //Go until a certain encoder count which should end by the peg
+					//ENCODE{
+					//ENCODElEncCount = leftEncoder->Get();
+					//ENCODErEncCount = rightEncoder->Get();
+					//ENCODEavgEncCount = (lEncCount + rEncCount)/2;
+					//ENCODEmyRobot.SetLeftRightMotorOutputs(.5,.5);
+					//ENCODE}
+					myRobot.SetLeftRightMotorOutputs(0,0);				
+					break;
+				}
+			}
+		}
+	
+	void OperatorControl(void)
+	{
+		myRobot.SetSafetyEnabled(false);
+		//myRobot.SetInvertedMotor(kFrontLeftMotor, true);
+		//	myRobot.SetInvertedMotor(3, true);
+		float LeftY;
+		float RightY;
+		bool lightOn = false;
+		AxisCamera &camera 			= AxisCamera::GetInstance();
+		while (IsOperatorControl())
+		{
+			
+			LeftY = stickL.GetY();
+			RightY = stickR.GetY();
+			LeftY = myRobot.Limit(LeftY);
+			RightY = myRobot.Limit(RightY);
+			
+			if(fabs(LeftY) >= 0.05 && fabs(RightY) >= 0.05)
+			{
+				myRobot.TankDrive(LeftY, RightY);
+			}
+			else if(fabs(LeftY) >= 0.05 && !(fabs(RightY) >= 0.05))
+			{
+				myRobot.TankDrive(LeftY, 0.0);
+			}
+			else if(!(fabs(LeftY) >= 0.05) && fabs(RightY) >= 0.05)
+			{
+				myRobot.TankDrive(0.0, RightY);
+			}
+			else myRobot.TankDrive(0.0, 0.0);
+			
+			if(stickR.GetRawButton(4)) lightOn = true;
+			else lightOn = false;
+			if(!lightOn) light->Set(light->kOff);
+			if(lightOn) light->Set(light->kOn);
+//			myRobot.m_frontLeftMotor->Set(LeftY);
+//			myRobot.m_frontRightMotor->Set(RightY);
+//			myRobot.m_rearLeftMotor->Set(LeftY);
+//			myRobot.m_rearRightMotor->Set(RightY);
+			
+			Wait(0.005);				// wait for a motor update time
+		}
+	}
+};
+
+START_ROBOT_CLASS(SixWheelBot);
+

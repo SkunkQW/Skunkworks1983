@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="EXT_FOLDER_LAST_PATH_SETTING" value="C:\WindRiver\WPILib"/>
+	<item key="EXT_FOLDER_LAST_SUBDIR_SETTING" value="false"/>
+	<section name="org.eclipse.debug.ui.sourcelookup.SourceLookupDialog">
+		<item key="DIALOG_X_ORIGIN" value="-75"/>
+		<item key="DIALOG_HEIGHT" value="427"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		<item key="DIALOG_Y_ORIGIN" value="44"/>
+		<item key="DIALOG_WIDTH" value="675"/>
+	</section>
+	<section name="org.eclipse.debug.ui.SCOPED_SAVE_SELECTION_DIALOG">
+		<item key="DIALOG_X_ORIGIN" value="472"/>
+		<item key="DIALOG_HEIGHT" value="476"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		<item key="DIALOG_Y_ORIGIN" value="41"/>
+		<item key="DIALOG_WIDTH" value="359"/>
+	</section>
+	<section name="org.eclipse.debug.ui.LAUNCH_CONFIGURATIONS_DIALOG_SECTION">
+		<item key="DIALOG_X_ORIGIN" value="169"/>
+		<item key="org.eclipse.debug.ui.DIALOG_SASH_WEIGHTS_1" value="418"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		<item key="DIALOG_HEIGHT" value="640"/>
+		<item key="org.eclipse.debug.ui.EXPANDED_NODES" value=", com.windriver.ide.launch.vxworks6.tmRunTask, com.windriver.ide.multilaunch.multiLaunchConfigurationType, com.windriver.ide.launch.vxworks6.tmRunRTP, "/>
+		<item key="DIALOG_Y_ORIGIN" value="33"/>
+		<item key="DIALOG_WIDTH" value="1167"/>
+		<item key="org.eclipse.debug.ui.DIALOG_SASH_WEIGHTS_2" value="581"/>
+	</section>
+</section>

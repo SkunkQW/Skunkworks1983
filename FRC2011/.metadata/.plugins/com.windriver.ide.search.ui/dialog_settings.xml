@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="com.windriver.ide.search.ui.internal.text.RetrieverPage">
+		<item key="filter-elsewhere" value="true"/>
+		<item key="splitter.w1" value="600"/>
+		<item key="filter-string" value="true"/>
+		<item key="use-location-filter" value="true"/>
+		<item key="filter-pattern" value=""/>
+		<item key="filter-include" value="true"/>
+		<item key="file-patterns" value="*"/>
+		<item key="case-sensitive" value="false"/>
+		<item key="filter-prep" value="true"/>
+		<item key="filter-regexp" value="false"/>
+		<item key="consider-derived" value="false"/>
+		<item key="replacement-string" value=""/>
+		<item key="search-string" value="#define"/>
+		<item key="splitter.w2" value="400"/>
+		<item key="regular-expression" value="false"/>
+		<item key="filter-comment" value="true"/>
+		<item key="whole-word" value="false"/>
+		<item key="use-filter-pattern" value="false"/>
+		<item key="case-sensitive-file-patterns" value="false"/>
+		<item key="filter-invert" value="false"/>
+		<item key="flat-layout" value="false"/>
+		<item key="filter-action" value="false"/>
+		<list key="search-string.combo">
+			<item value="#define"/>
+			<item value="Override me"/>
+			<item value="Disabled"/>
+			<item value="spike"/>
+		</list>
+		<list key="filter-pattern.combo">
+		</list>
+		<list key="file-patterns.combo">
+			<item value="*"/>
+			<item value="*.c,*.cpp,*.cxx,*.h,*.hpp,*.hxx"/>
+			<item value="*.java,*.mf,*.properties,*.xml"/>
+		</list>
+		<list key="replacement-string.combo">
+		</list>
+		<list key="scope-history">
+			<item value="Workspace"/>
+			<item value="Window working set"/>
+			<item value="Selected resources"/>
+		</list>
+		<section name="search-scope">
+			<item key="scope-descriptor-class" value="com.windriver.ide.search.ui.internal.scope.WorkspaceScopeDescription"/>
+		</section>
+	</section>
+</section>

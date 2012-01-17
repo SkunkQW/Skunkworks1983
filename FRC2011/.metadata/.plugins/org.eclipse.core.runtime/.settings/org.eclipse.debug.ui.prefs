@@ -1,0 +1,9 @@
+#Sat Mar 05 11:41:43 PST 2011
+pref_state_memento.org.eclipse.debug.ui.VariableView=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<VariablesViewMemento org.eclipse.debug.ui.SASH_DETAILS_PART\="315" org.eclipse.debug.ui.SASH_VIEW_PART\="684"/>
+org.eclipse.debug.ui.ExpressionView+org.eclipse.debug.ui.ToggleObjectBrowsersAction=true
+eclipse.preferences.version=1
+pref_state_memento.org.eclipse.debug.ui.RegisterView=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<VariablesViewMemento org.eclipse.debug.ui.SASH_DETAILS_PART\="315" org.eclipse.debug.ui.SASH_VIEW_PART\="684"/>
+preferredDetailPanes=DefaultDetailPane\:DefaultDetailPane|DefaultDetailPane,DSF Default Detail Pane\:DSF Default Detail Pane|
+org.eclipse.debug.ui.PREF_LAUNCH_PERSPECTIVES=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<launchPerspectives/>\r\n
+pref_state_memento.org.eclipse.debug.ui.ExpressionView=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<VariablesViewMemento org.eclipse.debug.ui.SASH_DETAILS_PART\="200" org.eclipse.debug.ui.SASH_VIEW_PART\="913">\r\n<COLUMN_SIZES IMemento.internal.id\="org.eclipse.dd.dsf.debug.ui.COLUMN_ID__TYPE" SIZE\="71"/>\r\n<COLUMN_SIZES IMemento.internal.id\="org.eclipse.dd.dsf.debug.ui.COLUMN_ID__EXPRESSION" SIZE\="100"/>\r\n<COLUMN_SIZES IMemento.internal.id\="org.eclipse.dd.dsf.debug.ui.COLUMN_ID__VALUE" SIZE\="114"/>\r\n</VariablesViewMemento>
+org.eclipse.debug.ui.user_view_bindings=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<viewBindings>\r\n<view id\="org.eclipse.debug.ui.VariableView">\r\n<perspective id\="DFE" userAction\="closed"/>\r\n</view>\r\n<view id\="org.eclipse.debug.ui.DebugView">\r\n<perspective id\="DFE" userAction\="closed"/>\r\n</view>\r\n<view id\="org.eclipse.debug.ui.ExpressionView">\r\n<perspective id\="DFE" userAction\="opened"/>\r\n</view>\r\n<view id\="org.eclipse.debug.ui.BreakpointView">\r\n<perspective id\="DFE" userAction\="closed"/>\r\n</view>\r\n</viewBindings>\r\n

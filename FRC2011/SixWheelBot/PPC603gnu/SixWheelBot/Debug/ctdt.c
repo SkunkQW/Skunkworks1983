@@ -1,0 +1,89 @@
+/* ctors and dtors arrays -- to be used by runtime system */
+/*   to call static constructors and destructors          */
+/*                                                        */
+/* NOTE: Use a C compiler to compile this file. If you    */
+/*       are using GNU C++, be sure to use compile this   */
+/*       file using a GNU compiler with the               */
+/*       -fdollars-in-identifiers flag.                   */
+
+
+void _GLOBAL__I_C__WindRiver_FRC2011_SixWheelBot_1983Lift_cpp_05647D79_EE6CE6C9();
+
+void _GLOBAL__I__ZN15C1983RobotDriveC2Ejjjj();
+
+void _GLOBAL__I__Z14sendVisionDatav();
+
+void _GLOBAL__I_C__WindRiver_FRC2011_SixWheelBot_MyRobot_encoder_tests_cpp_05647D79_3161BA89();
+
+void _GLOBAL__I__ZN16EncoderPIDSource8m_nCountE();
+
+void _GLOBAL__I_C__WindRiver_FRC2011_SixWheelBot_MyRobot_tank_cpp_05647D79_FF5477AA();
+
+void _GLOBAL__I_C__WindRiver_FRC2011_SixWheelBot_TankPIDOutput_cpp_05647D79_FF90CD83();
+
+void _GLOBAL__I__ZN9ErrorBase16globalErrorMutexE();
+
+void _GLOBAL__I__ZN9RobotBase10m_instanceE();
+
+void _GLOBAL__I__ZN14SmartDashboard11BUFFER_SIZEE();
+
+void _GLOBAL__I__ZN10Ultrasonic9kPingTimeE();
+
+void _GLOBAL__I_AxisCamera_debugFlag();
+
+extern void (*_ctors[])();
+void (*_ctors[])() =
+    {
+    _GLOBAL__I_C__WindRiver_FRC2011_SixWheelBot_1983Lift_cpp_05647D79_EE6CE6C9,
+    _GLOBAL__I__ZN15C1983RobotDriveC2Ejjjj,
+    _GLOBAL__I__Z14sendVisionDatav,
+    _GLOBAL__I_C__WindRiver_FRC2011_SixWheelBot_MyRobot_encoder_tests_cpp_05647D79_3161BA89,
+    _GLOBAL__I__ZN16EncoderPIDSource8m_nCountE,
+    _GLOBAL__I_C__WindRiver_FRC2011_SixWheelBot_MyRobot_tank_cpp_05647D79_FF5477AA,
+    _GLOBAL__I_C__WindRiver_FRC2011_SixWheelBot_TankPIDOutput_cpp_05647D79_FF90CD83,
+    _GLOBAL__I__ZN9ErrorBase16globalErrorMutexE,
+    _GLOBAL__I__ZN9RobotBase10m_instanceE,
+    _GLOBAL__I__ZN14SmartDashboard11BUFFER_SIZEE,
+    _GLOBAL__I__ZN10Ultrasonic9kPingTimeE,
+    _GLOBAL__I_AxisCamera_debugFlag,
+    0
+    };
+
+void _GLOBAL__D__GLOBAL__I_C__WindRiver_FRC2011_SixWheelBot_1983Lift_cpp_05647D79_EE6CE6C9();
+
+void _GLOBAL__D__ZN15C1983RobotDriveC2Ejjjj();
+
+void _GLOBAL__D__Z14sendVisionDatav();
+
+void _GLOBAL__D__GLOBAL__I_C__WindRiver_FRC2011_SixWheelBot_MyRobot_encoder_tests_cpp_05647D79_3161BA89();
+
+void _GLOBAL__D__ZN16EncoderPIDSource8m_nCountE();
+
+void _GLOBAL__D__GLOBAL__I_C__WindRiver_FRC2011_SixWheelBot_MyRobot_tank_cpp_05647D79_FF5477AA();
+
+void _GLOBAL__D__GLOBAL__I_C__WindRiver_FRC2011_SixWheelBot_TankPIDOutput_cpp_05647D79_FF90CD83();
+
+void _GLOBAL__D__ZN9ErrorBase16globalErrorMutexE();
+
+void _GLOBAL__D__ZN9RobotBase10m_instanceE();
+
+void _GLOBAL__D__ZN10Ultrasonic9kPingTimeE();
+
+void _GLOBAL__D_AxisCamera_debugFlag();
+
+extern void (*_dtors[])();
+void (*_dtors[])() =
+    {
+    _GLOBAL__D__GLOBAL__I_C__WindRiver_FRC2011_SixWheelBot_1983Lift_cpp_05647D79_EE6CE6C9,
+    _GLOBAL__D__ZN15C1983RobotDriveC2Ejjjj,
+    _GLOBAL__D__Z14sendVisionDatav,
+    _GLOBAL__D__GLOBAL__I_C__WindRiver_FRC2011_SixWheelBot_MyRobot_encoder_tests_cpp_05647D79_3161BA89,
+    _GLOBAL__D__ZN16EncoderPIDSource8m_nCountE,
+    _GLOBAL__D__GLOBAL__I_C__WindRiver_FRC2011_SixWheelBot_MyRobot_tank_cpp_05647D79_FF5477AA,
+    _GLOBAL__D__GLOBAL__I_C__WindRiver_FRC2011_SixWheelBot_TankPIDOutput_cpp_05647D79_FF90CD83,
+    _GLOBAL__D__ZN9ErrorBase16globalErrorMutexE,
+    _GLOBAL__D__ZN9RobotBase10m_instanceE,
+    _GLOBAL__D__ZN10Ultrasonic9kPingTimeE,
+    _GLOBAL__D_AxisCamera_debugFlag,
+    0
+    };

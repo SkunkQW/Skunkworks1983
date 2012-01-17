@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launchConfiguration type="com.windriver.ide.launch.tmAttachType">
+<booleanAttribute key="com.windriver.ide.launch.attachSpawned" value="false"/>
+<listAttribute key="com.windriver.ide.launch.coreNames">
+<listEntry value="MPC5200"/>
+</listAttribute>
+<booleanAttribute key="com.windriver.ide.launch.forceTidMatch" value="false"/>
+<listAttribute key="com.windriver.ide.launch.objNames">
+<listEntry value="tFRC_UserProgram_StartupLibraryInit"/>
+</listAttribute>
+<listAttribute key="com.windriver.ide.launch.objTids">
+<listEntry value="0x1e36e38"/>
+</listAttribute>
+<listAttribute key="com.windriver.ide.launch.objTypes">
+<listEntry value="KernelTask"/>
+</listAttribute>
+<listAttribute key="com.windriver.ide.launch.projectsForBuild"/>
+<stringAttribute key="com.windriver.ide.launch.targetConnection" value="{_map_;name;VxWorks6x_10.19.83.2;type;Wind River Target Server Connection;version;0.6;wtxProtocolVersion;4;user;Robert Steele;private;true;tgtsrv.args;-V -R C:/WindRiver -RW -Bt 3 -c C:\\WindRiver\\WPILib\\vxWorks -A 10.19.83.2;wrs.platform;vxworks-6.3;wrs.subtype;vxworks;generic;{_map_;NAME_MAPPING;[*\;*.unstripped],[*\;*];isFetchTargetStateOnConnect;false;listenToStartExitEvents;true;Breakpoint.default.stopScope;stop-triggering;targetStateUpdateStrategy;manual;periodicRefreshDelayInSeconds;15;PATH_MAPPING;[host:/\;C:\\]d,[/\;C:\\]d,[host:C:/\;C:\\]d,[host:\;]d,[/tgtsvr/\;C:\\WindRiver\\]d,[\;]d;DEVICE;WTX_VXWORKS;isFetchTargetStateOnStop;false;isFetchTargetStateOnRun;false;}transient;{_map_;transient.tgtsvr.args;-n VxWorks6x_10.19.83.2 -B wdbrpc -V -R C:/WindRiver -RW -Bt 3 -c C:\\WindRiver\\WPILib\\vxWorks -A 10.19.83.2;transient.hostdevice.default;host:;transient.bootflags.default;0x8;transient.bootpath.default;/c/ni-rt/system/vxWorks;}regHost;localhost;regKey;Robert_Steele_1298142261937;}"/>
+<stringAttribute key="com.windriver.ide.launch.targetMode" value="Task"/>
+<listAttribute key="com.windriver.ide.launch.threadIds">
+<listEntry value="166"/>
+</listAttribute>
+</launchConfiguration>

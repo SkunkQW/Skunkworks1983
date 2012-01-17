@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="originatingURLs">
+		<item key="com.sun.jna" value="http://subclipse.tigris.org/update_1.4.x/site.xml"/>
+	</section>
+	<section name="ModeSelectionPage">
+		<item key="new-features-mode" value="true"/>
+	</section>
+</section>

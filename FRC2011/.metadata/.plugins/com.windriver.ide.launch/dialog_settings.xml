@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="DebugSymbolBrowserViewParticipant.FilterSettings" value="315"/>
+	<section name="UnifiedDownloadDialog">
+		<item key="UnifiedDownloadDialog.loadOptions.C:/WindRiver/FRC2011/FECLift2/PPC603gnu/SimpleTemplate/Debug/SimpleTemplate.out" value=""/>
+		<item key="UnifiedDownloadDialog.loadOptions.C:/WindRiver/FRC2011/SixWheelBot/PPC603gnu/SixWheelBot/Debug/SixWheelBot.out" value="-plugin:nounload"/>
+		<item key="UnifiedDownloadDialog.loadOptions.C:/WindRiver/FRC2011/SimpleTemplate/PPC603gnu/SimpleTemplate/Debug/SimpleTemplate.out" value="-plugin:nounload"/>
+		<item key="UnifiedDownloadDialog.loadOptions.C:/WindRiver/FRC2011/FECLiftPWM/PPC603gnu/FECLiftPWM/Debug/FECLiftPWM.out" value="-plugin:nounload"/>
+		<item key="UnifiedDownloadDialog.SELECTED_DOWNLOAD_PATH" value="C:\WindRiver\FRC2011\FECLift\PPC603gnu\FECLift\Debug"/>
+		<list key="UnifiedDownloadDialog.STORE_DOWNLOAD_PATH_ID">
+			<item value="C:/WindRiver/FRC2011/SixWheelBot/PPC603gnu/SixWheelBot/Debug/SixWheelBot.out"/>
+			<item value="C:/WindRiver/FRC2011/FECLift2/PPC603gnu/SimpleTemplate/Debug/SimpleTemplate.out"/>
+			<item value="C:/WindRiver/FRC2011/FECLift/PPC603gnu/FECLift/Debug/FECLift.out"/>
+			<item value="C:/WindRiver/FRC2011/SimpleTemplate/PPC603gnu/SimpleTemplate/Debug/SimpleTemplate.out"/>
+		</list>
+	</section>
+	<section name="WRKernelTaskLaunchMainTab">
+	</section>
+	<section name="EntryPointSelectionDialog">
+	</section>
+	<section name="DebugSymbolBrowserView">
+		<item key="DebugSymbolBrowserViewParticipant.ActiveDebugSession" value="true"/>
+	</section>
+</section>

@@ -1,0 +1,50 @@
+#include "WPILib.h"
+
+#define JAGNUM 2
+#define TICKS 250 //ticks per revolution
+#define MAXVOLT 12.0 //max output voltage
+#define UNITSPERMETER 879
+//units for Set() per meter
+
+
+
+class FECLift : public SimpleRobot{
+public:
+	CANJaguar *theJag;
+	DriverStation *driverStation;
+	
+	FECLift()
+	{
+		//initialized the jag
+		theJag = new CANJaguar(JAGNUM,CANJaguar::kPosition);
+		theJag->ConfigEncoderCodesPerRev(TICKS);
+		theJag->ConfigMaxOutputVoltage(MAXVOLT);
+		theJag->ConfigNeutralMode(CANJaguar::kNeutralMode_Brake);
+		theJag->SetPositionReference(CANJaguar::kPosRef_QuadEncoder);
+		
+		GetWatchdog().SetExpiration(.3);
+	}
+	
+	void autonomous()
+	{
+	}
+	
+	void OperatorControl()
+	{
+	
+		//bool that says whether the run has been activated
+		
+		//setup watchdog
+		
+		GetWatchdog().SetEnabled(true);
+		GetWatchdog().SetExpiration(0.3);
+		
+		while (IsOperatorControl())
+		{
+			
+			theJag->Set(.5 * UNITSPERMETER);
+			GetWatchdog().Feed();
+		}
+	}
+	
+};

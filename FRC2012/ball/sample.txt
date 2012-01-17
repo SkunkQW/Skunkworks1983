@@ -1,0 +1,17 @@
+The Ball Demonstration Program
+-------------------------------
+
+The Ball program simulates a series of bouncing balls. A
+variable named "grid" displays as a two-dimensional grid on
+which the balls bounce. The balls are represented using an array
+of ASCII characters. 
+
+Three kinds of balls are simulated:
+*  *A soft ball:* This ball bounces off walls. The soft ball does
+   not affect the other balls it collides with. The soft ball is
+   represented by the character '0'.
+*  *A hard ball:* This ball deflects any ball it collides with. It is
+   represented by the character '*'.
+*  *A spinning ball:* This ball deflects and turns any ball it collides with. 
+   It is represented by the character '@'.
+

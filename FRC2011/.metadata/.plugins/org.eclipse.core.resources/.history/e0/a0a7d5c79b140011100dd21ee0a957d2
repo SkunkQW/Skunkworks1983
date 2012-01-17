@@ -1,0 +1,141 @@
+#include "WPILib.h"
+#include "math.h"
+
+#define JAGPORT 3
+#define TICKS 250 
+//ticks per revolution
+#define MAXVOLT 12.0 
+//max output voltage
+#define UNITSPERMETER 879.0
+//units for Set() per meter
+#define ENCODERSLOTA 4
+#define ENCODERSLOTB 4
+#define ENCODERCHANNELA 1
+#define ENCODERCHANNELB 2
+//Encoder slots and channels
+
+#define RATE 1
+//Use rate PID method?
+#if RATE
+#define P 6.0
+#define I 0.50
+#define D 0.000
+#define MAXDECEL -9.0
+#else
+#define P 1.0
+#define I 0.00
+#define D 0.000
+#endif
+//PID values
+
+#define DISTANCE_PER_PULSE 1.0/UNITSPERMETER
+
+class FECLift : public SimpleRobot{
+public:
+	Jaguar *theJag;
+	DriverStation *driverStation;
+	Encoder *fakeEncoder;
+	Encoder *theEncoder;
+	PIDController *theLift;
+	
+	bool decel;
+	bool done;
+	//bools for teleop
+	
+	FECLift()
+	{
+		//initialized the jag
+		theJag = new Jaguar(JAGPORT);
+		fakeEncoder = new Encoder(6,6,6,7,fakeEncoder->k4X);
+		theEncoder = new Encoder(ENCODERSLOTA, ENCODERCHANNELA, ENCODERSLOTB, ENCODERCHANNELB, false, theEncoder->k4X);
+#if RATE
+		theEncoder->SetPIDSourceParameter(Encoder::kRate);
+#else
+		theEncoder->SetPIDSourceParameter(Encoder::kDistance);
+#endif
+		
+		theEncoder->SetDistancePerPulse(DISTANCE_PER_PULSE);
+		driverStation = DriverStation::GetInstance();
+		theLift = new PIDController(P,I,D,theEncoder,theJag);
+		GetWatchdog().SetExpiration(.3);
+		
+		decel = false;
+		done = false;
+	}
+	
+	void Autonomous()
+	{
+	}
+	
+#define SETPOINT_METERS 1.0
+	
+	void OperatorControl(void)
+	{	
+		//setup watchdog	
+		GetWatchdog().SetEnabled(true);
+		GetWatchdog().SetExpiration(0.3);
+		theEncoder->Start();
+		theLift->Reset();
+		theLift->Enable();
+#if RATE
+
+#endif
+		float maxHeight = 0;
+		float maxRate = 0;
+		
+		while (IsOperatorControl())
+		{	
+			printf("Distance %f rate %f maxHeight %f maxRate %f\n", 
+					theEncoder->GetDistance(),
+					theEncoder->GetRate(),
+					maxHeight,
+					maxRate);
+			Wait(.05);
+			if(theEncoder->GetDistance() > maxHeight) maxHeight = theEncoder->GetDistance();
+			if(theEncoder->GetRate() > maxRate) maxRate = theEncoder->GetRate();
+			//check whether we should switch modes
+			decel = (decelToStop(theEncoder->GetRate(),SETPOINT_METERS - theEncoder->GetDistance()) <= MAXDECEL);
+			
+			if(theEncoder->GetDistance() > 0.5)
+			{
+				theLift->SetPID(.3,0,0);
+				theLift->SetSetpoint(0.0);
+				done = true;
+			}else if(!done){
+				theLift->SetSetpoint(2.0);
+			}
+			
+			/*if(theEncoder->GetDistance() >= SETPOINT_METERS)
+			{
+				theJag->Set(0.0);
+			}else if(decel){
+				theLift->SetSetpoint(rateSetpoint);
+			}else{
+				theLift->Set(1.0);
+			}*/
+#if RATE
+			
+#else
+			theLift->SetSetpoint(SETPOINT_METERS);
+#endif
+			GetWatchdog().Feed();
+		}
+	}
+	
+	void Disabled()
+	{
+		decel = false;
+		done = false;
+		theLift->Reset();
+	}
+#if RATE
+	//function to figure out what the required acceleration to stop at the end is assuming constant acceleration
+	float decelToStop(float vZero, float distanceRemaining)
+	{
+		return (-pow(vZero,2))/(2 * distanceRemaining);
+	}
+#endif
+};
+
+START_ROBOT_CLASS(FECLift);
+

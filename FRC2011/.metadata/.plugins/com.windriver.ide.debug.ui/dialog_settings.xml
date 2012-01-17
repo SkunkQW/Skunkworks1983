@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="DIRECTORY_CHOOSER_LAST_PATH_SETTING" value="C:\WindRiver\WPILib"/>
+	<item key="SOURCELOOKUP_BROWSE_PATH_TYPE_SETTING" value="false"/>
+	<section name="com.windriver.ide.debug.internal.ui.breakpoints.BreakpointStatusMonitor$StatusDialog">
+		<item key="DIALOG_X_ORIGIN" value="263"/>
+		<item key="DIALOG_HEIGHT" value="612"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		<item key="DIALOG_Y_ORIGIN" value="8"/>
+		<item key="DIALOG_WIDTH" value="856"/>
+	</section>
+</section>

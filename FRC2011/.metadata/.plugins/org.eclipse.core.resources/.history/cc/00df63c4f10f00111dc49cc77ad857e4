@@ -1,0 +1,21 @@
+#include "WPILib.h"
+
+#define JAGPORT 1
+#define ENCPORTA 2
+#define ENCPORTB 3
+
+
+class FECLift : public SimpleRobot{
+public:
+	CANJaguar *theJag;
+	DriverStation *driverStation;
+	Encoder *encoder;
+	
+	FECLift()
+	{
+		theJag = new CANJaguar(JAGPORT);
+		DriverStation = DriverStation::GetInstance();
+		Encoder *encoder = new Encoder(2,3,false,encoder->k4x);
+	}
+	
+};

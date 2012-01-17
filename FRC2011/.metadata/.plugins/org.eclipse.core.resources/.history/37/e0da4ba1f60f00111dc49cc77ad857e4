@@ -1,0 +1,66 @@
+#include "WPILib.h"
+
+#define JAGPORT 1
+#define ENCPORTA 2
+#define ENCPORTB 3
+#define TICKS 250 //ticks per revolution
+#define MAXVOLT 12.0 //max output voltage
+
+
+
+class FECLift : public SimpleRobot{
+public:
+	CANJaguar *theJag;
+	DriverStation *driverStation;
+	
+	FECLift()
+	{
+		//initialized the jag
+		theJag = new CANJaguar(JAGPORT,CANJaguar::kSpeed);
+		
+		theJag->ConfigEncoderCodesPerRev(TICKS);
+		theJag->ConfigMaxOutputVoltage(MAXVOLT);
+		theJag->ConfigNeutralMode(CANJaguar::kNeutralMode_Brake);
+		
+		//initialize the DS
+		driverStation = DriverStation::GetInstance();
+		
+		//Encoder(slot,port,slot,port,reversed?,EncoderType?);
+		Encoder *encoder = new Encoder(4,2,4,3,false);
+		
+		GetWatchdog().SetExpiration(.3);
+	}
+	
+	void autonomous()
+	{
+	}
+	
+	void OperatorControl()
+	{
+		//make this thing so we can get buttons
+		DriverStationEnhancedIO eIO = driverStation->GetEnhancedIO();
+		
+		//bool that says whether the run has been activated
+		bool going;
+		
+		
+		//setup watchdog
+		GetWatchdog().SetEnabled(true);
+		
+		while (isOperatorControl())
+		{
+			if(eIO.GetDigital(15))
+			{
+				going = true;
+			}
+			
+			if(going)
+			{
+				theJag->Set()
+			}
+			
+			GetWatchdog().Feed();
+		}
+	}
+	
+};
