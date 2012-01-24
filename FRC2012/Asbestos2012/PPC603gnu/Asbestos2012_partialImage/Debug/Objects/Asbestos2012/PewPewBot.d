@@ -1,6 +1,6 @@
 Asbestos2012_partialImage/Debug/Objects/Asbestos2012/PewPewBot.o:  \
- C:/WindRiver/FRC2012/Asbestos2012/PewPewBot.cpp \
-  C:/WindRiver/FRC2012/Asbestos2012/PewPewBot.h \
+ C:/WindRiver/Skunkworks1983/FRC2012/Asbestos2012/PewPewBot.cpp \
+  C:/WindRiver/Skunkworks1983/FRC2012/Asbestos2012/PewPewBot.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h \
   C:/WindRiver/vxworks-6.3/target/h/string.h \
   C:/WindRiver/vxworks-6.3/target/h/types/vxANSI.h \
@@ -316,10 +316,10 @@ Asbestos2012_partialImage/Debug/Objects/Asbestos2012/PewPewBot.o:  \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Vision/HSLImage.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Vision/ColorImage.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/WPIErrors.h \
-  C:/WindRiver/FRC2012/Asbestos2012/1983Defines2012.h \
-  C:/WindRiver/FRC2012/Asbestos2012/C1983Drive.h
+  C:/WindRiver/Skunkworks1983/FRC2012/Asbestos2012/1983Defines2012.h \
+  C:/WindRiver/Skunkworks1983/FRC2012/Asbestos2012/C1983Drive.h
 
-C:/WindRiver/FRC2012/Asbestos2012/PewPewBot.h:
+C:/WindRiver/Skunkworks1983/FRC2012/Asbestos2012/PewPewBot.h:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h:
 
@@ -951,6 +951,6 @@ C:/WindRiver/vxworks-6.3/target/h/WPILib/Vision/ColorImage.h:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/WPIErrors.h:
 
-C:/WindRiver/FRC2012/Asbestos2012/1983Defines2012.h:
+C:/WindRiver/Skunkworks1983/FRC2012/Asbestos2012/1983Defines2012.h:
 
-C:/WindRiver/FRC2012/Asbestos2012/C1983Drive.h:
+C:/WindRiver/Skunkworks1983/FRC2012/Asbestos2012/C1983Drive.h:

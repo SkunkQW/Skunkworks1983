@@ -31,8 +31,8 @@ else
 MODE_DIR := NonDebug
 endif
 OBJ_DIR := .
-PRJ_ROOT_DIR := C:/WindRiver/FRC2012/Asbestos2012
-WS_ROOT_DIR := C:/WindRiver/FRC2012
+PRJ_ROOT_DIR := C:/WindRiver/Skunkworks1983/FRC2012/Asbestos2012
+WS_ROOT_DIR := C:/WindRiver/Skunkworks1983/FRC2012
 
 
 
@@ -48,13 +48,13 @@ CPU = PPC603
 TOOL_FAMILY = gnu
 TOOL = gnu
 TOOL_PATH = 
-CC_ARCH_SPEC = -mcpu=603 -mstrict-align -mno-implicit-fp
+CC_ARCH_SPEC = -mcpu=603 -mstrict-align -mno-implicit-fp -mlongcall
 LIBPATH = 
 LIBS = 
 
 IDE_INCLUDES = -I$(WIND_BASE)/target/h -IC:/WindRiver/vxworks-6.3/target/h/WPILib -I$(WIND_BASE)/target/h/wrn/coreip 
 
-IDE_LIBRARIES = 
+IDE_LIBRARIES = C:/WindRiver/vxworks-6.3/target/lib/WPILib.a 
 
 
 
@@ -100,7 +100,7 @@ Asbestos2012/$(MODE_DIR)/% : DEBUGFLAGS_Librarian =
 Asbestos2012/$(MODE_DIR)/% : DEBUGFLAGS_Assembler = -O2 -fstrength-reduce -fno-builtin
 endif
 Asbestos2012/$(MODE_DIR)/% : IDE_INCLUDES = -I$(WIND_BASE)/target/h -IC:/WindRiver/vxworks-6.3/target/h/WPILib -I$(WIND_BASE)/target/h/wrn/coreip 
-Asbestos2012/$(MODE_DIR)/% : IDE_LIBRARIES = 
+Asbestos2012/$(MODE_DIR)/% : IDE_LIBRARIES = C:/WindRiver/vxworks-6.3/target/lib/WPILib.a 
 Asbestos2012/$(MODE_DIR)/% : PROJECT_TYPE = DKM
 Asbestos2012/$(MODE_DIR)/% : DEFINES = 
 Asbestos2012/$(MODE_DIR)/% : EXPAND_DBG = 0
@@ -109,7 +109,7 @@ Asbestos2012/$(MODE_DIR)/% : CPU = PPC603
 Asbestos2012/$(MODE_DIR)/% : TOOL_FAMILY = gnu
 Asbestos2012/$(MODE_DIR)/% : TOOL = gnu
 Asbestos2012/$(MODE_DIR)/% : TOOL_PATH = 
-Asbestos2012/$(MODE_DIR)/% : CC_ARCH_SPEC = -mcpu=603 -mstrict-align -mno-implicit-fp
+Asbestos2012/$(MODE_DIR)/% : CC_ARCH_SPEC = -mcpu=603 -mstrict-align -mno-implicit-fp -mlongcall
 Asbestos2012/$(MODE_DIR)/% : LIBPATH = 
 Asbestos2012/$(MODE_DIR)/% : LIBS = 
 Asbestos2012/$(MODE_DIR)/% : OBJ_DIR := Asbestos2012/$(MODE_DIR)
@@ -144,7 +144,7 @@ Asbestos2012_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Librarian =
 Asbestos2012_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Assembler = -O2 -fstrength-reduce -fno-builtin
 endif
 Asbestos2012_partialImage/$(MODE_DIR)/% : IDE_INCLUDES = -I$(WIND_BASE)/target/h -IC:/WindRiver/vxworks-6.3/target/h/WPILib -I$(WIND_BASE)/target/h/wrn/coreip 
-Asbestos2012_partialImage/$(MODE_DIR)/% : IDE_LIBRARIES = 
+Asbestos2012_partialImage/$(MODE_DIR)/% : IDE_LIBRARIES = C:/WindRiver/vxworks-6.3/target/lib/WPILib.a 
 Asbestos2012_partialImage/$(MODE_DIR)/% : PROJECT_TYPE = DKM
 Asbestos2012_partialImage/$(MODE_DIR)/% : DEFINES = 
 Asbestos2012_partialImage/$(MODE_DIR)/% : EXPAND_DBG = 0
@@ -153,16 +153,16 @@ Asbestos2012_partialImage/$(MODE_DIR)/% : CPU = PPC603
 Asbestos2012_partialImage/$(MODE_DIR)/% : TOOL_FAMILY = gnu
 Asbestos2012_partialImage/$(MODE_DIR)/% : TOOL = gnu
 Asbestos2012_partialImage/$(MODE_DIR)/% : TOOL_PATH = 
-Asbestos2012_partialImage/$(MODE_DIR)/% : CC_ARCH_SPEC = -mcpu=603 -mstrict-align -mno-implicit-fp
+Asbestos2012_partialImage/$(MODE_DIR)/% : CC_ARCH_SPEC = -mcpu=603 -mstrict-align -mno-implicit-fp -mlongcall
 Asbestos2012_partialImage/$(MODE_DIR)/% : LIBPATH = 
 Asbestos2012_partialImage/$(MODE_DIR)/% : LIBS = 
 Asbestos2012_partialImage/$(MODE_DIR)/% : OBJ_DIR := Asbestos2012_partialImage/$(MODE_DIR)
 
-Asbestos2012_partialImage/$(MODE_DIR)/Objects/Asbestos2012/C1983Drive.o : C:/WindRiver/FRC2012/Asbestos2012/C1983Drive.cpp
+Asbestos2012_partialImage/$(MODE_DIR)/Objects/Asbestos2012/C1983Drive.o : C:/WindRiver/Skunkworks1983/FRC2012/Asbestos2012/C1983Drive.cpp
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
-Asbestos2012_partialImage/$(MODE_DIR)/Objects/Asbestos2012/PewPewBot.o : C:/WindRiver/FRC2012/Asbestos2012/PewPewBot.cpp
+Asbestos2012_partialImage/$(MODE_DIR)/Objects/Asbestos2012/PewPewBot.o : C:/WindRiver/Skunkworks1983/FRC2012/Asbestos2012/PewPewBot.cpp
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 

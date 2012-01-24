@@ -1,16 +1,22 @@
 #include "PewPewBot.h"
 
-PewPewBot::PewPewBot()
+PewPewBot::PewPewBot() 
 {
 	drive = new C1983Drive();
+	
+	lStick = new Joystick(1);
+	rStick = new Joystick(2);
 }
 
-void PewPewBot::Autonomous()
+PewPewBot::~PewPewBot() {
+}
+
+void PewPewBot::Autonomous() 
 {
 	bool done = false;
-	while(IsAutonomous() && IsEnabled())
+	while (IsAutonomous() && IsEnabled()) 
 	{
-		if(!done)
+		if (!done) 
 		{
 			drive->setSpeedL(0.05);
 			drive->setSpeedR(0.05);
@@ -23,7 +29,22 @@ void PewPewBot::Autonomous()
 		}
 		done = true;
 	}
+
+}
+
+void PewPewBot::OperatorControl()
+{
+	while(IsOperatorControl() && !IsDisabled())
+	{
+		drive->setSpeedR(-rStick->GetY());
+		drive->setSpeedL(lStick->GetY());
+	}
+}
+
+void PewPewBot::Disabled()
+{
 	
 }
 
-START_ROBOT_CLASS(PewPewBot);
+START_ROBOT_CLASS(PewPewBot)
+;

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="DeleteAction">
+		<item key="" value=""/>
+	</section>
+	<section name="TargetConnectionDlg">
+		<item key="TargetConnectionTypePage.Wind River Target Server Connection.defaultInitialized" value="true"/>
+		<item key="TargetConnectionSummaryPage.Wind River Target Server Connection.connectOnFinish" value="true"/>
+		<item key="com.windriver.ide.target.ui.wizard.pages.VxWorksWizardPage.TargetServerOptionsControl.STORE_OPTION_VERBOSE_ID" value="true"/>
+		<list key="com.windriver.ide.target.ui.wizard.pages.VxWorksWizardPage.TargetServerOptionsControl.STORE_OPTIONS_ID">
+			<item value="-R C:/WindRiver/Skunkworks1983/FRC2012 -RW -Bt 3 -A"/>
+		</list>
+		<section name="com.windriver.ide.target.ui.wizard.pages.VxWorksWizardPage">
+			<section name="com.windriver.ide.target.ui.wizard.controls.TargetServerBackendSelectionControl">
+				<item key="com.windriver.ide.target.ui.wizard.pages.VxWorksWizardPage.WdbproxyTipcConnectionTypeConfigurationPanel.portType" value="70"/>
+				<item key="com.windriver.ide.target.ui.wizard.pages.VxWorksWizardPage.TargetServerBackendSelectionControl.selectedBackendType" value="wdbrpc"/>
+				<item key="com.windriver.ide.target.ui.wizard.pages.VxWorksWizardPage.TargetServerBackendSelectionControl.selectedCpu" value="MPC52xx"/>
+				<item key="com.windriver.ide.target.ui.wizard.pages.VxWorksWizardPage.wdbproxy.type" value="UDP"/>
+				<item key="com.windriver.ide.target.ui.wizard.pages.VxWorksWizardPage.wdbproxy.port" value="0x4444"/>
+				<item key="com.windriver.ide.target.ui.wizard.pages.VxWorksWizardPage.WdbproxyTipcConnectionTypeConfigurationPanel.address" value=""/>
+				<item key="com.windriver.ide.target.ui.wizard.pages.VxWorksWizardPage.WdbproxyTipcConnectionTypeConfigurationPanel.portInstance" value="71"/>
+				<item key="com.windriver.ide.target.ui.wizard.pages.VxWorksWizardPage.WdbserialBackendConfigurationPanel.selectedTTYSpeedRate.Windows Vista" value="9600"/>
+				<item key="com.windriver.ide.target.ui.wizard.pages.VxWorksWizardPage.WdbserialBackendConfigurationPanel.selectedTTYDevice.Windows Vista" value=""/>
+				<list key="com.windriver.ide.target.ui.wizard.pages.VxWorksWizardPage.wdbproxy.TCP.targetNameAddress">
+				</list>
+				<list key="com.windriver.ide.target.ui.wizard.pages.VxWorksWizardPage.wdbpipe.targetNameAddress">
+				</list>
+				<list key="com.windriver.ide.target.ui.wizard.pages.VxWorksWizardPage.wdbrpc..targetNameAddress">
+					<item value="10.19.83.2"/>
+				</list>
+				<list key="com.windriver.ide.target.ui.wizard.pages.VxWorksWizardPage.wdbproxy.UDP.targetNameAddress">
+				</list>
+				<list key="com.windriver.ide.target.ui.wizard.pages.VxWorksWizardPage.wdbproxy.targetNameAddress">
+				</list>
+			</section>
+			<section name="com.windriver.ide.target.ui.wizard.controls.VxWorksKernelImageSelectionControl">
+				<item key="com.windriver.ide.target.ui.wizard.pages.VxWorksWizardPage.KernelImageSelectionControl.filePathFromTargetButton.state" value="false"/>
+				<section name="com.windriver.ide.target.ui.wizard.pages.VxWorksWizardPage">
+					<section name="com.windriver.ide.target.ui.wizard.controls.VxWorksKernelImageSelectionControl$VxWorksKernelImageFileSelectionControl">
+						<list key="com.windriver.ide.target.ui.wizard.pages.VxWorksWizardPage.SelectedKernelImageHistory">
+							<item value="C:\WindRiver\WPILib\cRIOFRCII_vxWorks"/>
+						</list>
+					</section>
+				</section>
+			</section>
+		</section>
+	</section>
+</section>

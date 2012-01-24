@@ -13,7 +13,13 @@ public:
 	C1983Camera camera;
 	*/
 	
+	//Controls
+	Joystick *lStick;
+	Joystick *rStick;
+	
 	PewPewBot();
 	void Autonomous();
+	void OperatorControl();
+	void Disabled();
 	~PewPewBot();
 };
