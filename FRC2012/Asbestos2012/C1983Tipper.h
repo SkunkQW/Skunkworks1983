@@ -3,31 +3,35 @@
 #include "1983Defines2012.h"
 #include "WPILib.h"
 
+
+
+/*
+ * Created: January 23, 2012
+ * By: Quinn Schiller
+ * 
+ * Last Updated: January 24, 2012
+ * By: Quinn Schiller
+ * 
+ */
+
 class C1983Tipper
 {
 private:
-	Solenoid Tipper;	
+	Solenoid *tipper;
+	bool tipperState;
 
 public:
+	//UNLEASH THE FLOOD
 	C1983Tipper();
-	//Turn Tipper on
-	void setSpeedL(float speed);
 	
-	//Set the speed of the right side
-	void Tip(bool open);
+	// Raise and lower the tipper
+	void tip(bool open);
 	
-	/*
-	if(bool)
-	{
-		Tipper->Set(true);
-	}
-	else
-	{
-		Tipper->Set(false);
-	}
+	//returns the state of tipper
+	bool getState();
 	
-	*/
-	
+	//END THE MADNESS
 	~C1983Tipper();
+	
 };
 #endif
