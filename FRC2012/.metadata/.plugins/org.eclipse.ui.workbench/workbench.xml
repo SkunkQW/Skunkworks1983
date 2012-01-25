@@ -19,7 +19,7 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -28,31 +28,10 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33">
-<part id="0"/>
-<part id="3"/>
-<part id="1"/>
-<part id="2"/>
-</presentation>
+<presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33"/>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="PewPewBot.h" partName="PewPewBot.h" path="C:/WindRiver/Skunkworks1983/FRC2012/Asbestos2012/PewPewBot.h" title="PewPewBot.h" tooltip="Asbestos2012/PewPewBot.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Asbestos2012/PewPewBot.h"/>
-<editorState selectionHPixel="0" selectionLength="8" selectionOffset="272"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="C1983Drive.h" partName="C1983Drive.h" path="C:/WindRiver/Skunkworks1983/FRC2012/Asbestos2012/C1983Drive.h" title="C1983Drive.h" tooltip="Asbestos2012/C1983Drive.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Asbestos2012/C1983Drive.h"/>
-<editorState selectionHPixel="0" selectionLength="0" selectionOffset="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="C1983Drive.cpp" partName="C1983Drive.cpp" path="C:/WindRiver/Skunkworks1983/FRC2012/Asbestos2012/C1983Drive.cpp" title="C1983Drive.cpp" tooltip="Asbestos2012/C1983Drive.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Asbestos2012/C1983Drive.cpp"/>
-<editorState selectionHPixel="0" selectionLength="0" selectionOffset="0"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="PewPewBot.cpp" partName="PewPewBot.cpp" path="C:/WindRiver/Skunkworks1983/FRC2012/Asbestos2012/PewPewBot.cpp" title="PewPewBot.cpp" tooltip="Asbestos2012/PewPewBot.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Asbestos2012/PewPewBot.cpp"/>
-<editorState selectionHPixel="0" selectionLength="0" selectionOffset="513"/>
-</editor>
 </editors>
 <views>
 <view id="biz.junginger.newsfeed.eclipse.FeedView" partName="Feeds">
@@ -81,9 +60,6 @@
 <viewState horizontalPosition="0" linkWithEditor="f" release="2.0.0" showFilterPools="f" verticalPosition="0">
 <expanded>
 <element path="Conn///Skunkworks1.Local"/>
-<element path="Conn///Skunkworks1.VxWorks6x_10.19.83.2"/>
-<element path="Subs///Skunkworks1.VxWorks6x_10.19.83.2///com.windriver.ide.target.ui.rse.subsystem.targetdebugger=Wind River Target Debugger"/>
-<element path="Core///Skunkworks1.VxWorks6x_10.19.83.2///com.windriver.ide.target.ui.rse.subsystem.targetdebugger=Wind River Target Debugger///MPC52xx"/>
 </expanded>
 <selection>
 <element path="Conn///Skunkworks1.VxWorks6x_10.19.83.2"/>
@@ -116,7 +92,7 @@
 </viewState>
 </view>
 </views>
-<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="com.windriver.ide.perspective.ADE">
+<perspectives activePart="org.eclipse.ui.navigator.ProjectExplorer" activePerspective="com.windriver.ide.perspective.ADE">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.windriver.ide.ui.ADEPerspectiveFactory" id="com.windriver.ide.perspective.ADE" label="Application Development"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -274,7 +250,7 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="leftbottom" ratio="0.5208333" ratioLeft="325" ratioRight="299" relationship="4" relative="left">
+<info folder="true" part="leftbottom" ratio="0.74038464" ratioLeft="462" ratioRight="162" relationship="4" relative="left">
 <folder activePageID="org.eclipse.rse.ui.view.systemView" appearance="2" expanded="2">
 <page content="org.eclipse.rse.ui.view.systemView" label="Remote Systems"/>
 <page content="com.windriver.ide.debug.ui.osobjects.KOView" label="Kernel Objects"/>
@@ -289,182 +265,12 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Asbestos2012/PewPewBot.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Asbestos2012/C1983Drive.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SimpleTemplate/MyRobot.cpp"/>
-<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="C:\WindRiver\vxworks-6.3\target\h\WPILib\RobotDrive.h" project="SimpleTemplate"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Asbestos2012/PewPewBot.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Asbestos2012/C1983Drive.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Asbestos2012/C1983Drive.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Asbestos2012/PewPewBot.cpp"/>
-<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="C:\WindRiver\vxworks-6.3\target\h\WPILib\Joystick.h" project="Asbestos2012"/>
-</editors>
-<item historyLabel="PewPewBot.cpp" index="0">
-<position info="not_deleted" x="454" y="0"/>
-</item>
-<item historyLabel="PewPewBot.cpp" index="0">
-<position info="not_deleted" x="288" y="0"/>
-</item>
-<item historyLabel="C1983Drive.cpp" index="1">
-<position info="not_deleted" x="683" y="0"/>
-</item>
-<item historyLabel="MyRobot.cpp" index="2">
-<position/>
-</item>
-<item historyLabel="RobotDrive.h" index="3">
-<position/>
-</item>
-<item historyLabel="MyRobot.cpp" index="2">
-<position info="not_deleted" x="378" y="10"/>
-</item>
-<item historyLabel="RobotDrive.h" index="3">
-<position info="not_deleted" x="1502" y="0"/>
-</item>
-<item historyLabel="MyRobot.cpp" index="2">
-<position info="not_deleted" x="544" y="0"/>
-</item>
-<item historyLabel="RobotDrive.h" index="3">
-<position info="not_deleted" x="1502" y="0"/>
-</item>
-<item historyLabel="MyRobot.cpp" index="2">
-<position info="not_deleted" x="849" y="0"/>
-</item>
-<item historyLabel="RobotDrive.h" index="3">
-<position info="not_deleted" x="1536" y="0"/>
-</item>
-<item historyLabel="MyRobot.cpp" index="2">
-<position/>
-</item>
-<item historyLabel="RobotDrive.h" index="3">
-<position info="not_deleted" x="1536" y="0"/>
-</item>
-<item historyLabel="MyRobot.cpp" index="2">
-<position info="not_deleted" x="840" y="5"/>
-</item>
-<item historyLabel="RobotDrive.h" index="3">
-<position info="not_deleted" x="2069" y="5"/>
-</item>
-<item historyLabel="MyRobot.cpp" index="2">
-<position info="not_deleted" x="840" y="5"/>
-</item>
-<item historyLabel="MyRobot.cpp" index="2">
-<position info="not_deleted" x="535" y="0"/>
-</item>
-<item historyLabel="MyRobot.cpp" index="2">
-<position info="not_deleted" x="699" y="0"/>
-</item>
-<item historyLabel="PewPewBot.h" index="4">
-<position/>
-</item>
-<item historyLabel="C1983Drive.h" index="5">
-<position/>
-</item>
-<item historyLabel="C1983Drive.cpp" index="6">
-<position/>
-</item>
-<item historyLabel="C1983Drive.h" index="5">
-<position/>
-</item>
-<item historyLabel="C1983Drive.cpp" index="6">
-<position/>
-</item>
-<item historyLabel="PewPewBot.h" index="4">
-<position info="not_deleted" x="147" y="0"/>
-</item>
-<item historyLabel="PewPewBot.cpp" index="7">
-<position/>
-</item>
-<item historyLabel="PewPewBot.h" index="4">
-<position info="not_deleted" x="282" y="0"/>
-</item>
-<item historyLabel="MyRobot.cpp" index="2">
-<position info="not_deleted" x="699" y="0"/>
-</item>
-<item historyLabel="PewPewBot.h" index="4">
-<position info="not_deleted" x="374" y="0"/>
-</item>
-<item historyLabel="PewPewBot.cpp" index="7">
-<position/>
-</item>
-<item historyLabel="PewPewBot.h" index="4">
-<position info="not_deleted" x="374" y="0"/>
-</item>
-<item historyLabel="PewPewBot.cpp" index="7">
-<position/>
-</item>
-<item historyLabel="PewPewBot.h" index="4">
-<position info="not_deleted" x="374" y="0"/>
-</item>
-<item historyLabel="PewPewBot.h" index="4">
-<position info="not_deleted" x="374" y="0"/>
-</item>
-<item historyLabel="PewPewBot.cpp" index="7">
-<position info="not_deleted" x="692" y="0"/>
-</item>
-<item historyLabel="PewPewBot.cpp" index="7">
-<position info="not_deleted" x="554" y="0"/>
-</item>
-<item historyLabel="PewPewBot.cpp" index="7">
-<position info="not_deleted" x="603" y="0"/>
-</item>
-<item historyLabel="PewPewBot.cpp" index="7">
-<position info="not_deleted" x="585" y="0"/>
-</item>
-<item historyLabel="PewPewBot.cpp" index="7">
-<position info="not_deleted" x="602" y="0"/>
-</item>
-<item historyLabel="PewPewBot.cpp" index="7">
-<position info="not_deleted" x="578" y="0"/>
-</item>
-<item historyLabel="PewPewBot.h" index="4">
-<position info="not_deleted" x="374" y="0"/>
-</item>
-<item historyLabel="PewPewBot.cpp" index="7">
-<position info="not_deleted" x="644" y="0"/>
-</item>
-<item historyLabel="PewPewBot.h" index="4">
-<position info="not_deleted" x="272" y="8"/>
-</item>
-<item historyLabel="Joystick.h" index="8">
-<position info="not_deleted" x="888" y="8"/>
-</item>
-<item historyLabel="PewPewBot.h" index="4">
-<position info="not_deleted" x="272" y="8"/>
-</item>
-<item historyLabel="PewPewBot.cpp" index="7">
-<position info="not_deleted" x="644" y="0"/>
-</item>
-<item historyLabel="PewPewBot.cpp" index="7">
-<position info="not_deleted" x="643" y="0"/>
-</item>
-<item historyLabel="PewPewBot.cpp" index="7">
-<position info="not_deleted" x="681" y="0"/>
-</item>
-<item historyLabel="PewPewBot.cpp" index="7">
-<position info="not_deleted" x="683" y="0"/>
-</item>
-<item historyLabel="PewPewBot.cpp" index="7">
-<position info="not_deleted" x="109" y="0"/>
-</item>
-<item active="true" historyLabel="PewPewBot.cpp" index="7">
-<position info="not_deleted" x="137" y="0"/>
-</item>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="left"/>
-<trimItem IMemento.internal.id="leftbottom"/>
-</trimArea>
-<trimArea IMemento.internal.id="131072">
-<trimItem IMemento.internal.id="bottom"/>
-<trimItem IMemento.internal.id="right"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -477,6 +283,21 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="C1983Shooter.h" tooltip="Asbestos2012/C1983Shooter.h">
+<persistable path="/Asbestos2012/C1983Shooter.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="C1983Collector.h" tooltip="Asbestos2012/C1983Collector.h">
+<persistable path="/Asbestos2012/C1983Collector.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="1983Defines2012.h" tooltip="Asbestos2012/1983Defines2012.h">
+<persistable path="/Asbestos2012/1983Defines2012.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="C1983Shooter.cpp" tooltip="Asbestos2012/C1983Shooter.cpp">
+<persistable path="/Asbestos2012/C1983Shooter.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="C1983Drive.h" tooltip="Asbestos2012/C1983Drive.h">
+<persistable path="/Asbestos2012/C1983Drive.h"/>
+</file>
 <file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Joystick.h" tooltip="C:/WindRiver/vxworks-6.3/target/h/WPILib/Joystick.h">
 <persistable path="C:\WindRiver\vxworks-6.3\target\h\WPILib\Joystick.h" project="Asbestos2012"/>
 </file>
@@ -486,9 +307,6 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="C1983Drive.cpp" tooltip="Asbestos2012/C1983Drive.cpp">
 <persistable path="/Asbestos2012/C1983Drive.cpp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="C1983Drive.h" tooltip="Asbestos2012/C1983Drive.h">
-<persistable path="/Asbestos2012/C1983Drive.h"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="PewPewBot.h" tooltip="Asbestos2012/PewPewBot.h">
 <persistable path="/Asbestos2012/PewPewBot.h"/>
 </file>
@@ -497,9 +315,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="MyRobot.cpp" tooltip="SimpleTemplate/MyRobot.cpp">
 <persistable path="/SimpleTemplate/MyRobot.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="1983Defines2012.h" tooltip="Asbestos2012/1983Defines2012.h">
-<persistable path="/Asbestos2012/1983Defines2012.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="C1983Tipper.h" tooltip="Asbestos2012/C1983Tipper.h">
 <persistable path="/Asbestos2012/C1983Tipper.h"/>

@@ -17,8 +17,8 @@ void C1983Drive::setSpeedL(float speed)
 //Set both jags right side to the given speed -1.0 to 1.0
 void C1983Drive::setSpeedR(float speed)
 {
-	rightJag1->Set(speed);
-	rightJag2->Set(speed);
+	rightJag1->Set(-speed);
+	rightJag2->Set(-speed);
 }
 /*
 //TODO: Replace get function with something that actually gets speed

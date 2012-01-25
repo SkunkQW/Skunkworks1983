@@ -1,0 +1,52 @@
+#include "WPIlib.h"
+
+class C1983Collector
+{
+
+private:		
+		Jaguar *collectorJag1; //Jaguars for the shooting wheels
+		Jaguar *collectorJag2;
+		Jaguar *collectorJag3;
+		Jaguar *collectorJag4;
+
+		//Encoder *encoder1;
+		//Encoder *encoder2;
+		//Encoder *encoder3;
+		//Encoder *encoder4;
+
+public:
+
+		// Reads if a ball has entered the conveyor.
+		bool BallEnter();
+
+		//Feeds the nall through the collector.
+		void feed();
+
+		// Check if ball is in shooting position.
+		void isBallReadyShoot();
+
+		//Check if there is a ball ready to enter the shooting chamber of the collector.
+		void isBallReadyStage();
+
+		// Checks the amount of balls that has entered the collector.
+		int getBallCount();
+
+		void setBottom();
+		void setTop();
+};
+
+
+/*
+ * C1983Collector.h
+ *
+ *  Created on: Jan 14, 2012
+ *      Author: Austin
+ */
+
+#ifndef C1983COLLECTOR_H_
+#define C1983COLLECTOR_H_
+
+
+
+
+#endif /* C1983COLLECTOR_H_ */

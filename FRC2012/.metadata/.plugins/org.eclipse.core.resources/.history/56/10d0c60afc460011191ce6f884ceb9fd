@@ -1,0 +1,34 @@
+#include "C1983Shooter.h"
+#include "Jaguar.h"
+
+void C1983Shooter::shoot()
+{
+
+}
+
+void C1983Shooter::setVelocity(float velocity)
+{
+
+}
+
+float C1983Shooter::getVelocity()
+{
+
+}
+
+bool C1983Shooter::isReady()
+{
+
+}
+
+void C1983Shooter::run(){
+	
+}
+
+bool C1983Shooter::isRunning(){
+	return isRunning;
+}
+
+void C1983Shooter::setIsRunning(bool state){
+	isRunning = state;
+}

@@ -36,7 +36,7 @@ void PewPewBot::OperatorControl()
 {
 	while(IsOperatorControl() && !IsDisabled())
 	{
-		drive->setSpeedR(-rStick->GetY());
+		drive->setSpeedR(rStick->GetY());
 		drive->setSpeedL(lStick->GetY());
 	}
 }

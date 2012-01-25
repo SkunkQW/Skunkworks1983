@@ -1,0 +1,40 @@
+#include "C1983Shooter.h"
+#include "Jaguar.h"
+
+
+
+void C1983Shooter::shoot()
+{
+
+}
+
+void C1983Shooter::setVelocity( float velocity )
+{
+
+}
+
+void C1983Shooter::isReady( bool check )
+{
+
+}
+
+void C1983Shooter::getCoordinates()
+{
+
+}
+
+void C1983Shooter::getCorrections()
+{
+
+}
+
+/*
+ * C1983Shooter.cpp
+ *
+ *  Created on: Jan 14, 2012
+ *      Author: Austin
+ */
+
+
+
+
